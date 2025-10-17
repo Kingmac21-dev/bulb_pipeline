@@ -23,4 +23,4 @@ phases:
 
   post_build:
     commands:
-      - echo "Resources created by me"
+      - echo "Resources created by mac"
