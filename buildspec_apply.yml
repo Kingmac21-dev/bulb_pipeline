@@ -19,8 +19,8 @@ phases:
       - pwd
       - ls
       - terraform init -no-color
-      - terraform apply --auto-approve
+      - terraform delete --auto-approve
 
   post_build:
     commands:
-      - echo "Resources created by mac"
+      - echo "Resources created by me"
