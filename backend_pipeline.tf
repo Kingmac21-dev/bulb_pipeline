@@ -172,7 +172,7 @@ resource "aws_codepipeline" "mac_backend_pipeline" {
  
       configuration = {
         Owner          = "Kingmac21-dev"
-        Repo           = "bulb_pipeline"
+        Repo           = "farm-stack-backend"
         Branch         = "main"
         OAuthToken     = data.aws_ssm_parameter.mac_github_token.value
       }
