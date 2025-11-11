@@ -1,7 +1,4 @@
-provider "aws" {
-    region = "us-east-1"
-}
- 
+
 resource "aws_s3_bucket" "mac_frontend_codepipeline_artifact_bucket" {
   bucket = "mac-frontend-codepipeline-artifact-bucket"
 }
