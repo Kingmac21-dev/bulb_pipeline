@@ -100,6 +100,9 @@ resource "aws_instance" "mac_backend_server" {
   subnet_id              = aws_subnet.mac_public_subnet.id
   vpc_security_group_ids = [aws_security_group.mac_backend_sg.id]
   key_name               = "backend_pipeline-key_pair"
+  tags = {
+    Name     ="mac_backend_server"
+  }
 
   user_data = <<EOF
 #!/bin/bash
@@ -159,6 +162,9 @@ resource "aws_instance" "mac_frontend_server" {
   subnet_id              = aws_subnet.mac_public_subnet.id
   vpc_security_group_ids = [aws_security_group.mac_frontend_sg.id]
   key_name = "backend_pipeline-key_pair"
+  tags = {
+    Name     ="mac_frontend_server"
+  }
 
   user_data = <<EOF
 #!/bin/bash
